@@ -3,7 +3,7 @@
 #include "Arduino.h"
 
 #define DEBUG
-#define PLOTWAVE  //uncomment this line to plot the waveform (Arduino IDE Serial Plotter)
+//#define PLOTWAVE  //uncomment this line to plot the waveform (Arduino IDE Serial Plotter)
 
 // Outputs
 AudioOutputSPDIF3        spdif3_1;       //xy=674,308
