@@ -10,7 +10,7 @@ AudioOutputSPDIF3        spdif3_1;       //xy=674,308
 Plotter                  plotter;
 
 // Inputs
-AsyncAudioInputSPDIF3    spdif_async1(false, false, 100, 20); //dither = true, noiseshaping = true, anti-aliasing attenuation=100dB, minimum resampling filter length=20   //xy=408,225
+AsyncAudioInputSPDIF3    spdif_async1;//(false, false, 100, 20, 80); //dither = true, noiseshaping = true, anti-aliasing attenuation=100dB, minimum resampling filter length=20   //xy=408,225
 
 
 AudioSynthWaveform       waveform1;    
