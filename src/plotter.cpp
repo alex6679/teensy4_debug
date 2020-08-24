@@ -1,9 +1,6 @@
 
 #include <Arduino.h>
 #include "plotter.h"
-// namespace {
-//     uint32_t counter=0;
-// }
 
 void Plotter::activate(bool on){
     _on=on;
@@ -26,18 +23,17 @@ void Plotter::update(void) {
         // Serial.print("counter: ");
         // Serial.println(counter);
         // counter++;
-        uint8_t step=6;
         for (uint16_t i =0; i< AUDIO_BLOCK_SAMPLES; i++){
             for (uint8_t j =0; j< noChannels; j++){
                 if(dataPtr[j]){
-                    if(i%step==0){
+                    if(i%_step==0){
                         Serial.print(*dataPtr[j]);                  
                         Serial.print(" ");
                     }
                     ++dataPtr[j];
                 }
             }
-            if(i%step==0){
+            if(i%_step==0){
                 Serial.println();
             }
         }
